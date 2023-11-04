@@ -18,7 +18,7 @@ config :chatter, Chatter.Repo,
 config :chatter, ChatterWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "3sVu3mbD6925UbF46YqTg27YZdqahhAsHRgpFuze1HJQwoCopIrttCJp//O9QfbR",
-  server: false
+  server: true
 
 # In test we don't send emails.
 config :chatter, Chatter.Mailer, adapter: Swoosh.Adapters.Test
@@ -31,3 +31,9 @@ config :logger, level: :warning
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# Sets Ecto's andbox for usage only in tests
+config :chatter, :sql_sandbox, true
+
+# configures wallaby to use chrome
+config :wallaby, driver: Wallaby.Chrome
