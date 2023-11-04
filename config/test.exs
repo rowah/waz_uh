@@ -36,4 +36,8 @@ config :phoenix, :plug_init_mode, :runtime
 config :chatter, :sql_sandbox, true
 
 # configures wallaby to use chrome
-config :wallaby, driver: Wallaby.Chrome
+config :wallaby,
+  driver: Wallaby.Chrome,
+  chromedriver: [headless: true],
+  max_wait_time: 10_000,
+  screenshot_on_failure: true
