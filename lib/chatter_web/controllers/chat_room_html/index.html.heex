@@ -1,3 +1,9 @@
 <section>
   <h2 class="title">Hello and welcome to Chatter!</h2>
+
+  <ul>
+    <%= for room <- @chat_rooms do %>
+    <li class="room"><%= room.name %></li>
+    <% end %>
+  </ul>
 </section>
