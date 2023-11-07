@@ -14,7 +14,7 @@ config :chatter, Chatter.Repo,
   pool_size: 10
 
 # We don't run a server during test. If one is required,
-# you can enable the server option below.
+# you can enable the server option below. Enabled
 config :chatter, ChatterWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "3sVu3mbD6925UbF46YqTg27YZdqahhAsHRgpFuze1HJQwoCopIrttCJp//O9QfbR",
