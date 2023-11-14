@@ -3,7 +3,7 @@ defmodule ChatterWeb.UserVisitsHomepageTest do
 
   test "user visits homepage", %{session: session} do
     session
-    |> visit("/")
+    |> visit("/chat-rooms")
     |> assert_has(Query.css(".title", text: "Hello and welcome to Chatter!"))
   end
 end

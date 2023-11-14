@@ -7,7 +7,7 @@ defmodule Chatter.ChatTest do
 
   describe "all_rooms/0" do
     test "returns all the available rooms" do
-      [room2, room2] = insert_pair(:chat_room)
+      [room1, room2] = insert_pair(:chat_room)
 
       rooms = Chat.all_rooms()
 
